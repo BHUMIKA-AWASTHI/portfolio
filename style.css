@@ -1,0 +1,310 @@
+/* ===========================================================
+   RESET
+=========================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("images/paper-bg.jpg") repeat;
+  background-size: 450px;
+  color: #7a002b;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+@font-face {
+  font-family: "Amsterdam";
+  src: url(/fonts/Amsterdam\ Handwriting.ttf) format("truetype");
+}
+
+/* ===========================================================
+   VARIABLES
+=========================================================== */
+
+:root {
+  --primary: #7a002b;
+  --secondary: #e56f95;
+  --heading-pink: #e87292;
+  --navbar: #fcecf6;
+  --container: 1300px;
+  --nav-height: 72px;
+}
+
+/* ===========================================================
+   NAVBAR
+=========================================================== */
+
+.navbar {
+  height: var(--nav-height);
+  width: 100%;
+  background: var(--navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 7%;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 30%;
+  display: block;
+  position: relative;
+  left: -15%;
+}
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* ===========================================================
+   HERO
+=========================================================== */
+.hero {
+  min-height: calc(100vh - var(--nav-height));
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: cen;
+  padding-top: 2rem;
+  gap: clamp(2rem, 4vw, 5rem);
+  padding-inline: 7%;
+}
+
+/* LEFT */
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-family: Amsterdam;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.5;
+
+  margin-top: 2%;
+}
+.developer-herotext {
+  color: var(--primary);
+}
+.journal-herotext {
+  color: var(--heading-pink);
+  font-weight: 900;
+}
+.volume {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  margin: 30px 0 10px 0;
+}
+
+.hero-left > p {
+  width: min(520px, 100%);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* ===========================================================
+   FEATURES
+=========================================================== */
+
+.hero-points {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.hero-points div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-points span {
+  color: #d86b88;
+  display: block;
+  line-height: 1.2;
+}
+.icon {
+  font-size: 20px;
+}
+
+.hero-points p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ===========================================================
+   RIGHT
+=========================================================== */
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-self: start; /* grid item ko top par le aayega */
+  padding-top: 1rem; /* optional */
+}
+
+.hero-right img {
+  width: min(80%, 520px);
+  height: auto;
+  object-fit: contain;
+  margin-top: -20%;
+}
+
+/* ===========================================================
+   MOBILE
+=========================================================== */
+
+@media (max-width: 767px) {
+  .navbar {
+    padding-inline: 1.5rem;
+  }
+
+  .logo img {
+    width: 100%;
+    left: -30%;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .hero-left {
+    order: 1;
+    align-items: center;
+  }
+
+  .hero-right {
+    order: 2;
+    margin-top: -6%;
+  }
+
+  .hero-right img {
+    width: min(100%, 340px);
+  }
+
+  .hero-left > p {
+    width: 100%;
+  }
+
+  .hero-points {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .hero-left > p {
+    align-self: center;
+  }
+  .hero-points {
+    align-self: center;
+  }
+}
+
+.story {
+  width: min(90%, 900px);
+  margin: -8% auto 0 auto;
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.story h1 {
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  font-family: Amsterdam;
+}
+
+.story p {
+  max-width: 720px;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  line-height: 1.9;
+  color: #555;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Large Desktop */
+@media (min-width: 1600px) {
+  .story {
+    max-width: 1000px;
+  }
+
+  .story p {
+    max-width: 800px;
+    font-size: 1.35rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .story {
+    width: 88%;
+    padding: 4rem 0;
+  }
+
+  .story p {
+    line-height: 1.8;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .story {
+    width: 92%;
+    padding: 3rem 1rem;
+    gap: 1rem;
+  }
+
+  .story h1 {
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  .story p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
