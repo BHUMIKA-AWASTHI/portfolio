@@ -316,10 +316,8 @@ body {
 .contact-section {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   align-items: stretch;
-
   overflow: hidden;
 }
 
@@ -327,18 +325,64 @@ body {
       LEFT
 ========================== */
 
-.contact-left {
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 6rem 4rem;
-}
-
 .left-content {
   max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding-left: 2rem;
+}
+.left-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4.2rem;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -1px;
+  color: var(--primary);
+}
+
+/* FOUND IN MY NOTEBOOK */
+
+.section-tag {
+  width: fit-content;
+  font-family: "Special Elite", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: var(--primary);
+  text-transform: uppercase;
+  border-bottom: 1px dashed rgba(179, 122, 104, 0.45);
+  padding-bottom: 8px;
+}
+
+/* Paragraph */
+
+.left-content p {
+  font-family: "Crimson Text", serif;
+  font-size: 1.35rem;
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* Last note */
+.note {
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--primary-);
+  border-left: 3px solid #d7a8a8;
+  padding-left: 18px;
+}
+
+/* Signature */
+
+.signature {
+  margin-top: 40px;
+  font-family: "Caveat", cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--primary);
 }
 
 /* ==========================
@@ -347,13 +391,10 @@ body {
 
 .contact-right {
   flex: 1.25;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 2rem;
-
   position: relative;
 }
 
@@ -364,9 +405,7 @@ body {
 .paper-wrapper {
   width: min(760px, 100%);
   aspect-ratio: 0.82;
-
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,14 +414,11 @@ body {
 .paper-bg {
   position: absolute;
   inset: 0;
-  transform: translate(-10%, 0);
+  transform: translate(-5%, 0);
   width: 130%;
   height: 100%;
-
   object-fit: contain;
-
   pointer-events: none;
-
   user-select: none;
 }
 
@@ -393,48 +429,31 @@ body {
 .contact-form {
   position: relative;
   z-index: 2;
-
   width: 72%;
-
   display: flex;
   flex-direction: column;
-
   gap: 2rem;
-
-  margin-left: 2.5%;
+  margin-left: 14.5%;
 }
 
 .contact-form input {
   height: 76px;
-
   padding: 0 28px;
-
   border: 2px solid #ec90aa;
-
   border-radius: 24px;
-
   background: #fdf1f5;
-
   font-size: 1rem;
-
   outline: none;
 }
 
 .contact-form textarea {
   height: 240px;
-
   padding: 26px;
-
   resize: none;
-
   border: 2px solid #ec90aa;
-
   border-radius: 24px;
-
   background: #fdf1f5;
-
   outline: none;
-
   font-size: 1rem;
 }
 
@@ -446,26 +465,20 @@ body {
 .contact-form button {
   width: 180px;
   height: 72px;
-
   border: none;
-
   border-radius: 40px;
-
   background: #e56c95;
-
   color: #fff;
-
   font-size: 1rem;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: 0.35s;
 }
 
 .contact-form button:hover {
   transform: translateY(-4px);
 }
+
 @media (max-width: 1024px) {
   .contact-left {
     padding: 4rem 3rem;
@@ -493,104 +506,74 @@ body {
 
   .contact-left {
     width: 100%;
-
     padding: 4rem 1.5rem 2rem;
-
     text-align: center;
   }
 
   .contact-right {
     width: 100%;
-
     padding: 0 1rem 3rem;
   }
 
   .paper-wrapper {
     width: 100%;
     max-width: 520px;
-
     aspect-ratio: 0.82;
   }
 
   .contact-form {
     width: 76%;
-
     gap: 1.25rem;
-
     margin-left: 3%;
   }
 
   .contact-form input {
     height: 56px;
-
     border-radius: 18px;
-
     font-size: 0.95rem;
   }
 
   .contact-form textarea {
     height: 170px;
-
     border-radius: 18px;
-
     padding: 18px;
-
     font-size: 0.95rem;
   }
 
   .contact-form button {
     width: 140px;
     height: 56px;
-
     border-radius: 28px;
-
     font-size: 0.95rem;
   }
 }
 
 .success-popup {
   position: fixed;
-
   inset: 0;
-
   background: rgba(0, 0, 0, 0.55);
-
   backdrop-filter: blur(8px);
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   opacity: 0;
-
   visibility: hidden;
-
   transition: 0.35s;
-
   z-index: 9999;
 }
 
 .success-popup.show {
   opacity: 1;
-
   visibility: visible;
 }
 
 .popup-card {
   width: min(420px, 90vw);
-
   background: #fff;
-
   border-radius: 22px;
-
   padding: 40px;
-
   text-align: center;
-
   transform: translateY(25px);
-
   transition: 0.35s;
 }
 
@@ -600,25 +583,15 @@ body {
 
 .popup-check {
   width: 80px;
-
   height: 80px;
-
   margin: auto;
-
   border-radius: 50%;
-
   background: #22c55e;
-
   color: #fff;
-
   font-size: 42px;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   margin-bottom: 20px;
 }
 
@@ -628,18 +601,13 @@ body {
 
 .popup-card p {
   line-height: 1.7;
-
   color: #666;
 }
 
 .popup-card button {
   margin-top: 30px;
-
   padding: 12px 30px;
-
   border: none;
-
   border-radius: 10px;
-
   cursor: pointer;
 }
