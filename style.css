@@ -261,7 +261,7 @@ body {
   max-width: 720px;
   font-size: clamp(1rem, 1.3vw, 1.25rem);
   line-height: 1.9;
-  color: #555;
+  color: var(--primary);
   margin: 0;
   letter-spacing: 0.2px;
 }
@@ -378,7 +378,6 @@ body {
 /* Signature */
 
 .signature {
-  margin-top: 40px;
   font-family: "Caveat", cursive;
   font-size: 2.2rem;
   font-weight: 600;
@@ -479,37 +478,88 @@ body {
   transform: translateY(-4px);
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .contact-left {
-    padding: 4rem 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  .left-content {
+    max-width: 700px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+
+    align-items: center;
+    text-align: center;
   }
 
   .contact-right {
     padding: 2rem 1.5rem;
+    transform: translate(-5%, 0);
   }
 
   .contact-form {
-    width: 75%;
+    width: 80vw;
+    padding-right: 2rem;
   }
 
   .contact-form textarea {
     height: 220px;
   }
-}
-
-@media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column;
+  .section-tag {
+    margin-inline: auto;
   }
 
+  .note {
+    border-left: none;
+    border-top: 2px solid #d7a8a8;
+    padding: 1rem 0 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
   /* Left section will automatically come first */
 
   .contact-left {
     width: 100%;
-    padding: 4rem 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  .left-content {
+    max-width: 700px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+
+    align-items: center;
     text-align: center;
   }
 
+  .section-tag {
+    margin-inline: auto;
+  }
+
+  .note {
+    border-left: none;
+    border-top: 2px solid #d7a8a8;
+    padding: 1rem 0 0;
+    text-align: center;
+  }
   .contact-right {
     width: 100%;
     padding: 0 1rem 3rem;
@@ -525,6 +575,7 @@ body {
     width: 76%;
     gap: 1.25rem;
     margin-left: 3%;
+    margin-top: 7%;
   }
 
   .contact-form input {
@@ -545,6 +596,33 @@ body {
     height: 56px;
     border-radius: 28px;
     font-size: 0.95rem;
+  }
+  .left-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    gap: 18px;
+  }
+
+  .left-content h2 {
+    font-size: clamp(2.8rem, 9vw, 4rem);
+    line-height: 1.05;
+  }
+
+  .left-content p {
+    max-width: 95%;
+    margin: auto;
+    font-size: 1.15rem;
+  }
+
+  .signature {
+    align-self: center;
+  }
+  .paper-bg {
+    transform: translate(-11%, 0%);
+    width: 130%;
+    height: 105%;
+    object-fit: fill;
   }
 }
 
