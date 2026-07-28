@@ -1,24 +1,60 @@
-/* Styles used only by WorkPage.jsx. */
-.work-page-intro {
-  max-width: 1200px;
+.work-page {
+  width: min(100%, 1200px);
   margin: 0 auto;
-  padding: 90px 40px 0;
+  padding: clamp(4.5rem, 9vw, 7.5rem) clamp(1.25rem, 5vw, 3.5rem) 5rem;
+  padding-top: 2rem;
 }
 
-.work-page-intro h1 {
-  margin: 0 0 28px;
-  color: #ef5d93;
-  font-family: Georgia, serif;
-  font-size: clamp(2.3rem, 6vw, 3rem);
+.work-page__intro {
+  max-width: 690px;
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
 }
 
-.work-page-intro p {
-  max-width: 640px;
+.work-page__eyebrow {
+  margin: 0 0 3rem;
+  color: #b15072;
+  font-family: "Courier New", monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.work-page__intro h1 {
+  margin: 0;
+  color: var(--primary);
+  font-family: Amsterdam, Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.work-page__intro > p:last-child {
+  margin: 1.5rem 0 0;
   color: #6d3550;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: clamp(1rezm, 2vw, 1.15rem);
+  line-height: 1.75;
 }
 
-@media (max-width: 720px) {
-  .work-page-intro { padding-inline: 24px; }
+.work-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  align-items: stretch;
+}
+
+@media (max-width: 920px) {
+  .work-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .work-page {
+    padding-top: 3.5rem;
+  }
+
+  .work-page__grid {
+    grid-template-columns: 1fr;
+  }
 }
