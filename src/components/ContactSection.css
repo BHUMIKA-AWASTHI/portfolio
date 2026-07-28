@@ -185,7 +185,7 @@
     width: 100%;
     padding: 0;
     margin: 0 auto;
-
+    margin-top: 2%;
     align-items: center;
     text-align: center;
   }
@@ -228,15 +228,6 @@
     justify-content: center;
     align-items: center;
     padding: 4rem 2rem;
-  }
-  .left-content {
-    max-width: 700px;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-
-    align-items: center;
-    text-align: center;
   }
 
   .section-tag {
@@ -288,9 +279,13 @@
   }
   .left-content {
     max-width: 100%;
-    width: 100%;
     padding: 0 1rem;
-    gap: 18px;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+    align-items: center;
+    text-align: center;
   }
 
   .left-content h2 {
