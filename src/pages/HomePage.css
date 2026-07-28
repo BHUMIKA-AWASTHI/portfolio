@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url("images/paper-bg.jpg") repeat;
+  background: url("../../images/paper-bg.jpg") repeat;
   background-size: 450px;
   color: #7a002b;
   overflow-x: hidden;
@@ -24,7 +24,7 @@ body {
 }
 @font-face {
   font-family: "Amsterdam";
-  src: url(/fonts/Amsterdam\ Handwriting.ttf) format("truetype");
+  src: url("../../fonts/Amsterdam Handwriting.ttf") format("truetype");
 }
 
 /* ===========================================================
@@ -38,52 +38,6 @@ body {
   --navbar: #fcecf6;
   --container: 1300px;
   --nav-height: 72px;
-}
-
-/* ===========================================================
-   NAVBAR
-=========================================================== */
-header {
-  position: sticky; /* or sticky if you want it to stick after scrolling */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.navbar {
-  height: var(--nav-height);
-  width: 100%;
-  background: var(--navbar);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 7%;
-  flex-shrink: 0;
-}
-
-.logo img {
-  width: 30%;
-  display: block;
-  position: relative;
-  left: -15%;
-}
-.nav-links {
-  display: flex;
-  gap: 3rem;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--secondary);
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--primary);
 }
 
 /* ===========================================================
@@ -189,23 +143,6 @@ header {
 =========================================================== */
 
 @media (max-width: 767px) {
-  .navbar {
-    padding-inline: 1.5rem;
-  }
-
-  .logo img {
-    width: 100%;
-    left: -30%;
-  }
-
-  .nav-links {
-    gap: 1.25rem;
-  }
-
-  .nav-links a {
-    font-size: 0.9rem;
-  }
-
   .hero-left {
     order: 1;
     align-items: center;
@@ -626,7 +563,7 @@ header {
     align-self: center;
   }
   .paper-bg {
-    transform: translate(-11%, 0%);
+    transform: translate(-10%, 0%);
     width: 130%;
     height: 105%;
     object-fit: fill;

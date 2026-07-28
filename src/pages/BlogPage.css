@@ -1,0 +1,41 @@
+/* Styles used only by BlogPage.jsx. */
+.page-intro,
+.content-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 40px;
+}
+
+.page-intro { padding-top: 90px; }
+.page-intro h1 {
+  margin: 0 0 28px;
+  color: #ef5d93;
+  font-family: Georgia, serif;
+  font-size: clamp(2.3rem, 6vw, 3rem);
+}
+.page-intro p { max-width: 640px; color: #6d3550; font-size: 1.15rem; line-height: 1.7; }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.blog-card {
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #f5cede;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px #7a002b12;
+}
+.blog-card h2 { margin: 8px 0; color: #7a002b; }
+.blog-card p { color: #6d3550; line-height: 1.6; }
+.eyebrow { color: #e56f95 !important; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; }
+.tag { display: inline-block; margin: 8px 8px 0 0; padding: 4px 9px; color: #a62b63; background: #fcecf6; border-radius: 999px; font-size: 0.8rem; }
+
+@media (max-width: 720px) {
+  .page-intro,
+  .content-grid { padding-inline: 24px; }
+}

@@ -1,4 +1,7 @@
 import { posts } from "../data/posts";
+import "./BlogPage.css";
+
+// Blog content comes from data/posts.js; this component only decides how it looks.
 export default function BlogPage() {
   return (
     <>
@@ -7,6 +10,7 @@ export default function BlogPage() {
         <p>Ideas, experiments, and lessons from building for the web.</p>
       </section>
       <section className="content-grid">
+        {/* Map each post object to a card. */}
         {posts.map((post) => (
           <article className="blog-card" key={post.slug}>
             <p className="eyebrow">{post.date}</p>

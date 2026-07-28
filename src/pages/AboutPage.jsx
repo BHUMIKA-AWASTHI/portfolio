@@ -1,4 +1,5 @@
 import profileImage from "../../images/hero-sticker-new.png";
+import "./AboutPage.css";
 
 const facts = [
   [
@@ -20,6 +21,7 @@ const facts = [
   ],
 ];
 
+// The content is kept in facts so JSX only needs one reusable list item.
 export default function AboutPage() {
   return (
     <section className="about-section">
@@ -32,12 +34,12 @@ export default function AboutPage() {
           <div className="about-role">
             <h3>Bhumika Awasthi</h3>
             <p>Full Stack Developer</p>
-            <span>Frontend & MERN Enthusiast</span>
           </div>
         </div>
         <div className="about-right">
           <h1>A little about me...</h1>
           <ul className="about-list">
+            {/* Create one list item for each fact. */}
             {facts.map(([icon, text]) => (
               <li key={icon}>
                 <span>{icon}</span>

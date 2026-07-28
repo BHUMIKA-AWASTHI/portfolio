@@ -1,3 +1,4 @@
+// Keep the written blog content separate from BlogPage's layout and styles.
 export const posts = [
   {
     slug: "building-thoughtful-web-experiences",

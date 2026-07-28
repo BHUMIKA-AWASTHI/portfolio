@@ -1,0 +1,39 @@
+/* Shared foundation: colours, font and browser defaults used by every page. */
+@font-face {
+  font-family: "Amsterdam";
+  src: url("../../fonts/Amsterdam Handwriting.ttf") format("truetype");
+}
+
+:root {
+  --primary: #7a002b;
+  --secondary: #e56f95;
+  --heading-pink: #e87292;
+  --navbar: #fcecf6;
+  --container: 1300px;
+  --nav-height: 72px;
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #fff7fa url("../../images/paper-bg.jpg") repeat;
+  background-size: 450px;
+}
+
+.site-shell {
+  min-height: 100vh;
+}

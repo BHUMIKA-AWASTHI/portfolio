@@ -1,18 +1,26 @@
-import { useState } from 'react'
-import heroSticker from '../../images/hero-sticker.png'
-import paper from '../../images/pink-paper.png'
+import { useState } from "react";
+import heroSticker from "../../images/hero-sticker.png";
+import paper from "../../images/pink-paper.png";
+import "./HomePage.css";
 
 export default function HomePage() {
-  const [status, setStatus] = useState('idle')
+  // The form status controls its button and the success popup.
+  const [status, setStatus] = useState("idle");
+
+  // Send the form without a full page refresh.
   const submit = async (event) => {
-    event.preventDefault()
-    setStatus('sending')
+    event.preventDefault();
+    setStatus("sending");
     try {
       const response = await fetch(event.currentTarget.action, { method: 'POST', body: new FormData(event.currentTarget), headers: { Accept: 'application/json' } })
-      if (!response.ok) throw new Error('Request failed')
-      event.currentTarget.reset(); setStatus('sent')
-    } catch { setStatus('error') }
-  }
+      if (!response.ok) throw new Error("Request failed");
+      event.currentTarget.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
+  };
+  // This page contains the existing hero, story and contact sections unchanged.
   return <>
     <section className="hero"><div className="hero-left"><h1><span className="developer-herotext">Developer's</span><span className="journal-herotext">Journal </span></h1><span className="volume"> Volume 01 </span><p>Building clean, scalable and user-focused web experiences one line of code at a time.</p><div className="hero-points"><div><span className="icon">{'{ }'}</span><p><span>Write Code</span><span>Solve Problems</span></p></div><div><span className="icon">🚀</span><p><span>Build Projects</span><span>Create Impact</span></p></div><div><span className="icon">🌱</span><p><span>Keep Learning</span><span>Grow Every Day</span></p></div></div></div><div className="hero-right"><img src={heroSticker} alt="Developer Sticker" /></div></section>
     <section className="story"><h1>A New Chapter Begins!</h1><p>Behind every interface lies a story of countless ideas, careful decisions, and continuous learning.</p><p>This journal is a collection of those stories—where clean code meets thoughtful design, and every project reflects a step toward becoming a better developer. I believe meaningful experiences are built one thoughtful line of code at a time.</p></section>

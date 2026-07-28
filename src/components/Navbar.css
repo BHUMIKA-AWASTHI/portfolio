@@ -1,0 +1,145 @@
+/* This is the one navbar used by Home, About, Work, Blog and Contact. */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  height: var(--nav-height);
+  width: 100%;
+  background: var(--navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 7%;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 180px; /* Fixed size keeps this larger logo identical on every page. */
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.logo img {
+  display: block;
+  width: 150%;
+  /* height: 56px; */
+  object-fit: contain;
+  margin-left: -50%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-shrink: 0;
+}
+
+.nav-links a {
+  display: block;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+}
+
+/* ---------------- Mobile Navigation ---------------- */
+
+.menu-btn {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    grid-template-columns: repeat(2, 10px);
+    grid-template-rows: repeat(2, 10px);
+    gap: 6px;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .menu-btn span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary);
+    transition: 0.3s;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: calc(var(--nav-height) + 10px);
+    right: 24px;
+
+    width: 220px;
+
+    background: rgba(255, 245, 249, 0.96);
+    backdrop-filter: blur(18px);
+
+    border-radius: 0 0 28px 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 24px 0;
+
+    gap: 22px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+
+    transition: 0.35s ease;
+    z-index: 1001;
+  }
+
+  .mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: 0.3s;
+  }
+
+  .mobile-menu a:hover,
+  .mobile-menu a.active {
+    color: var(--primary);
+  }
+}

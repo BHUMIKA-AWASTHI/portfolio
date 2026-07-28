@@ -1,1 +1,0 @@
-import{n as e}from"./Navbar-DrhdlGH6.js";var t=e();function n({title:e,text:n}){return(0,t.jsxs)(`section`,{className:`page-intro`,children:[(0,t.jsx)(`h1`,{children:e}),(0,t.jsx)(`p`,{children:n})]})}export{n as t};
