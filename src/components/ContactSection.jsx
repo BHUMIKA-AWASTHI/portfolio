@@ -1,22 +1,39 @@
-import { useState } from "react";
 import paper from "../../images/pink-paper.png";
 import "./ContactSection.css";
+import { useState, useEffect } from "react";
 
 export default function ContactSection() {
   const [status, setStatus] = useState("idle");
+  useEffect(() => {
+    console.log("Status changed:", status);
+  }, [status]);
   const submit = async (event) => {
     event.preventDefault();
+
+    const form = event.currentTarget; // <-- Save it before await
+
     setStatus("sending");
+
     try {
-      const response = await fetch(event.currentTarget.action, {
+      const response = await fetch(form.action, {
         method: "POST",
-        body: new FormData(event.currentTarget),
-        headers: { Accept: "application/json" },
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
       });
-      if (!response.ok) throw new Error("Request failed");
-      event.currentTarget.reset();
+
+      console.log(response.status);
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      form.reset(); // <-- Use saved reference
+
       setStatus("sent");
-    } catch {
+    } catch (err) {
+      console.error(err);
       setStatus("error");
     }
   };
@@ -55,6 +72,7 @@ export default function ContactSection() {
                 placeholder="Type your message here"
                 required
               />
+
               <button type="submit" disabled={status === "sending"}>
                 {status === "sending" ? "Sending..." : "Submit"}
               </button>
