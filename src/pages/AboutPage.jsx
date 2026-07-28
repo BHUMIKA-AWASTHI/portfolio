@@ -49,7 +49,6 @@ export default function AboutPage() {
           <div className="about-role">
             <h3>Bhumika Awasthi</h3>
             <p>Full Stack Developer</p>
-            <span>Building thoughtful digital experiences.</span>
           </div>
         </div>
 
@@ -69,18 +68,15 @@ export default function AboutPage() {
 
           <section className="education-section">
             <h2>📖 My Learning Journey</h2>
-
-            <div className="education-timeline">
+            <div className="education-board">
               {education.map((item) => (
-                <div className="education-card" key={item.year}>
+                <article className="education-card" key={item.year}>
+                  {/* school logo here */}
                   <span className="education-year">{item.year}</span>
-
                   <h3>{item.title}</h3>
-
                   <p>{item.subtitle}</p>
-
                   <small>{item.place}</small>
-                </div>
+                </article>
               ))}
             </div>
           </section>
