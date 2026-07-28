@@ -1,0 +1,1 @@
+import{i as e,n as t,r as n,t as r}from"./global-D8Dhb5yr.js";import{t as i}from"./ContactSection-DDxQcuXr.js";var a=e(),o=n(),s=t();function c(){return(0,s.jsx)(i,{})}(0,o.createRoot)(document.getElementById(`root`)).render((0,s.jsx)(a.StrictMode,{children:(0,s.jsxs)(`main`,{className:`site-shell`,children:[(0,s.jsx)(r,{currentPage:`contact`}),(0,s.jsx)(c,{})]})}));
