@@ -14,10 +14,10 @@
 }
 
 .polaroid {
-  width: 250px;
+  /* width: 250px;
   padding: 12px 12px 38px;
-  background: #fff;
-  box-shadow: 0 8px 20px #0000002e;
+  background: transparent;
+  box-shadow: 0 8px 20px #0000002e; */
   transform: rotate(-2deg);
 }
 
@@ -39,7 +39,9 @@
 }
 
 .about-role {
-  margin-top: 28px;
+  margin-top: 6px;
+  transform: rotate(-2deg);
+  margin-left: 60px;
 }
 
 .about-role h3 {
@@ -108,15 +110,44 @@
     text-align: center;
   }
 }
+/* ===========================
+   EDUCATION
+=========================== */
+
 .education-section {
   margin-top: 70px;
 }
 
 .education-section h2 {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   color: #ef5d93;
   font-family: Georgia, serif;
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+/* ---------- Desktop ---------- */
+
+/* ===========================================
+   EDUCATION
+=========================================== */
+
+.education-section {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 90px auto 0;
+}
+
+.education-section h2 {
+  text-align: center;
+
+  color: #ef5d93;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(2rem, 4vw, 2.8rem);
+
+  margin-bottom: 50px;
 }
 
 /* Desktop */
@@ -124,95 +155,167 @@
 .education-board {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
 
-  gap: 28px;
+  gap: 40px;
 
-  align-items: start;
+  width: 100%;
 }
-
-/* Card */
 
 .education-card {
   position: relative;
 
   background: #fff8fb;
 
-  padding: 28px 22px 22px;
+  border: 2px dashed #f5b8d1;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  padding: 34px 24px 28px;
 
-  border: 2px dashed #f6b7ce;
+  text-align: center;
 
-  transition: 0.35s;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s ease;
 }
 
 .education-card:hover {
-  transform: translateY(-6px) rotate(-1deg);
+  transform: translateY(-8px) rotate(-1deg);
 }
-
-/* Tape */
 
 .education-card::before {
   content: "";
 
   position: absolute;
 
-  width: 90px;
+  width: 95px;
   height: 18px;
 
-  background: #d8c29b;
+  background: #d7c094;
 
   top: -9px;
   left: 50%;
 
-  transform: translateX(-50%) rotate(-3deg);
-
-  opacity: 0.9;
+  transform: translateX(-50%) rotate(-4deg);
 }
 
 /* Logo */
 
 .education-logo {
-  width: 62px;
-  height: 62px;
-  display: block;
-  margin: 0 auto 18px;
-  object-fit: contain;
-}
+  width: 75px;
+  height: 75px;
 
-/* Year */
+  object-fit: contain;
+
+  display: block;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  padding: 6px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
 
 .education-year {
-  display: inline-block;
-  margin-bottom: 12px;
+  display: block;
+
   color: #e56f95;
-  font-size: 0.85rem;
+
   font-weight: 700;
+
+  margin-bottom: 14px;
 }
 
-/* Title */
-
 .education-card h3 {
-  margin-bottom: 8px;
-
   color: #7a002b;
 
-  font-size: 1.15rem;
+  font-size: 1.35rem;
+
+  margin-bottom: 10px;
 }
 
 .education-card p {
   color: #6d3550;
 
-  line-height: 1.5;
+  line-height: 1.6;
 
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .education-card small {
   color: #9d7082;
 
-  line-height: 1.5;
+  line-height: 1.6;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-left {
+    text-align: center;
+  }
+
+  .polaroid {
+    margin: 0 auto;
+  }
+
+  .education-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+  }
+
+  .education-card {
+    width: min(100%, 550px);
+  }
+}
+@media (max-width: 767px) {
+  .about-section {
+    padding: 50px 24px;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-left {
+    text-align: center;
+  }
+
+  .polaroid {
+    margin: 0 auto;
+  }
+
+  .education-section {
+    margin-top: 60px;
+  }
+
+  .education-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+  }
+
+  .education-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px 20px;
+  }
+
+  .education-logo {
+    width: 60px;
+    height: 60px;
+  }
 }

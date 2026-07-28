@@ -60,6 +60,7 @@ body {
 .hero-left {
   display: flex;
   flex-direction: column;
+  padding-top: 4rem;
 }
 
 .hero h1 {
@@ -135,7 +136,7 @@ body {
   width: min(80%, 520px);
   height: auto;
   object-fit: contain;
-  margin-top: -20%;
+  margin-top: -25%;
 }
 
 /* ===========================================================
@@ -144,6 +145,7 @@ body {
 
 @media (max-width: 767px) {
   .hero-left {
+    padding-top: 0;
     order: 1;
     align-items: center;
   }
@@ -164,6 +166,11 @@ body {
   .hero-points {
     justify-content: center;
     gap: 1.5rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .hero-left {
+    padding-top: 0;
   }
 }
 @media (max-width: 1024px) {
