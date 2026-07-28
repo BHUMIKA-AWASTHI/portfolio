@@ -4,164 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bhumika Awasthi | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Google Fonts -->
+    <link rel="stylesheet" href="/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Crimson+Text:wght@400;600&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
   </head>
-
   <body>
-    <main>
-      <header>
-        <nav class="navbar">
-          <a href="#" class="logo">
-            <img src="images/logo.png" alt="Bhumika Logo" />
-          </a>
-
-          <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <section class="hero">
-        <div class="hero-left">
-          <h1>
-            <span class="developer-herotext">Developer's</span>
-            <span class="journal-herotext">Journal </span>
-          </h1>
-
-          <span class="volume"> Volume 01 </span>
-
-          <p>
-            Building clean, scalable and user-focused web experiences one line
-            of code at a time.
-          </p>
-
-          <div class="hero-points">
-            <div>
-              <span class="icon">{ }</span>
-              <p>
-                <span>Write Code</span>
-                <span>Solve Problems</span>
-              </p>
-            </div>
-
-            <div>
-              <span class="icon">🚀</span>
-              <p>
-                <span>Build Projects</span>
-
-                <span>Create Impact</span>
-              </p>
-            </div>
-
-            <div>
-              <span class="icon">🌱</span>
-              <p>
-                <span>Keep Learning</span>
-                <span>Grow Every Day</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="hero-right">
-          <img src="images/hero-sticker.png" alt="Developer Sticker" />
-        </div>
-      </section>
-
-      <section class="story">
-        <h1>A New Chapter Begins!</h1>
-        <p>
-          Behind every interface lies a story of countless ideas, careful
-          decisions, and continuous learning.
-        </p>
-        <p>
-          This journal is a collection of those stories—where clean code meets
-          thoughtful design, and every project reflects a step toward becoming a
-          better developer.I believe meaningful experiences are built one
-          thoughtful line of code at a time.
-        </p>
-      </section>
-      <section class="contact-section">
-        <!-- LEFT -->
-        <div class="left-content">
-          <span class="section-tag"> FOUND IN MY NOTEBOOK </span>
-
-          <h2>"Every great collaboration begins with a simple message."</h2>
-
-          <p>
-            Behind every meaningful project is a conversation that started with
-            a simple hello.
-          </p>
-
-          <p>
-            Whether you have an idea to build, a challenge to solve, or simply
-            want to connect, I'd love to hear your story.
-          </p>
-
-          <p class="note">
-            ✦ Leave me a note, and let's create something remarkable together.
-          </p>
-
-          <div class="signature">— Bhumika ✦</div>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="contact-right">
-          <div class="paper-wrapper">
-            <img
-              class="paper-bg"
-              src="/images/pink-paper.png"
-              alt="Notebook Paper"
-            />
-
-            <form
-              id="contactForm"
-              action="https://formspree.io/f/xbdnpadd"
-              method="POST"
-              class="contact-form"
-            >
-              <input type="text" name="name" placeholder="Name" required />
-
-              <input type="email" name="email" placeholder="Email" required />
-
-              <textarea
-                name="message"
-                placeholder="Type your message here"
-                required
-              ></textarea>
-
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <div class="success-popup" id="successPopup">
-      <div class="popup-card">
-        <div class="popup-check">✓</div>
-
-        <h2>Message Sent!</h2>
-
-        <p>Thank you for reaching out. I'll get back to you soon.</p>
-
-        <button id="closePopup">Close</button>
-      </div>
-    </div>
-    <script src="/script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
