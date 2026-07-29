@@ -9,7 +9,6 @@
   max-width: 690px;
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
 }
-
 .work-page__eyebrow {
   margin: 0 0 3rem;
   color: #b15072;
@@ -19,8 +18,11 @@
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
-
-.work-page__intro h1 {
+.work-heading .my-experience-journey {
+  margin-top: 3rem;
+}
+.work-page__intro h1,
+.work-heading h1 {
   margin: 0;
   color: var(--primary);
   font-family: Amsterdam, Georgia, serif;
@@ -56,5 +58,150 @@
 
   .work-page__grid {
     grid-template-columns: 1fr;
+  }
+}
+.projects-wrapper {
+  max-height: 0;
+  overflow-y: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.projects-wrapper.show {
+  max-height: 5000px;
+
+  opacity: 1;
+}
+
+/*==================================
+Journal Divider
+===================================*/
+
+.journal-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+
+  margin: 6rem auto 2rem;
+
+  width: min(900px, 90%);
+}
+
+/* divider line */
+
+.journal-divider__line {
+  flex: 1;
+
+  height: 2px;
+
+  background: linear-gradient(to right, transparent, #d98ca8, transparent);
+}
+
+/* button */
+
+.journal-divider__button {
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.45rem;
+
+  color: #7b1847;
+
+  transition: 0.35s;
+}
+
+/* flower */
+
+.flower {
+  font-size: 1.4rem;
+
+  color: #cf6f98;
+
+  transition: 0.35s;
+}
+
+/* text */
+
+.text {
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.15rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+
+  position: relative;
+}
+
+/* underline */
+
+.text::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #cf6f98;
+
+  transform: translateX(-50%);
+
+  transition: 0.35s;
+}
+
+/* arrow */
+
+.arrow {
+  font-size: 1.2rem;
+
+  transition: 0.35s;
+}
+
+/* hover */
+
+.journal-divider__button:hover {
+  transform: translateY(-4px);
+}
+
+.journal-divider__button:hover .flower {
+  transform: rotate(25deg) scale(1.15);
+}
+
+.journal-divider__button:hover .arrow {
+  transform: translateY(6px);
+}
+
+.journal-divider__button:hover .text::after {
+  width: 100%;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  .journal-divider {
+    gap: 12px;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .flower {
+    font-size: 1.2rem;
   }
 }
