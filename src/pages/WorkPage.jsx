@@ -7,6 +7,18 @@ import "./WorkPage.css";
 
 const projects = [
   {
+    title: "Mine Eraaah",
+    year: "2025",
+    summary:
+      "A complete e-commerce platform built for small businesses, featuring a seamless shopping experience with a dedicated admin dashboard.",
+    highlights: [
+      "User authentication and role-based access",
+      "Admin dashboard for product & order management",
+      "Responsive MERN stack application",
+    ],
+    liveUrl: "https://mine-eraaah.vercel.app/",
+  },
+  {
     title: "GlowCart",
     year: "2025",
     summary:
@@ -15,6 +27,7 @@ const projects = [
       "MERN stack application",
       "Authentication and cart system",
       "Responsive, API-powered interface",
+      "Deplying soon!",
     ],
   },
   {
@@ -26,7 +39,9 @@ const projects = [
       "React.js wallet dashboard",
       "Transaction update API integration",
       "Clear, student-friendly user interface",
+      "Deployed v1 only , v2 is to be deployed yet!",
     ],
+    liveUrl: "https://campus-coin.netlify.app/",
   },
   {
     title: "Agra Odyssey",
@@ -37,6 +52,7 @@ const projects = [
       "Destination discovery and booking features",
       "Responsive layouts for every screen size",
       "Thoughtfully optimized user journeys",
+      "Deploying soon!",
     ],
   },
 ];
