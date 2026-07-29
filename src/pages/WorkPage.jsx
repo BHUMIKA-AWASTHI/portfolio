@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "../components/ExperienceCard";
 import experiences from "../data/experiences";
+import ScrollProgress from "../components/ScrollProgress";
 
 import "./WorkPage.css";
 
@@ -72,69 +73,72 @@ export default function WorkPage() {
   };
 
   return (
-    <main className="work-page">
-      {/* ================= Work Experience ================= */}
+    <>
+      <ScrollProgress />
+      <main className="work-page">
+        {/* ================= Work Experience ================= */}
 
-      <section className="work-experience">
-        <div className="work-heading">
-          <p className="work-page__eyebrow">Professional Journey</p>
+        <section className="work-experience">
+          <div className="work-heading">
+            <p className="work-page__eyebrow">Professional Journey</p>
 
-          <h1>Work Experience</h1>
+            <h1>Work Experience</h1>
 
-          <p className="my-experience-journey">
-            My journey through internships and real-world development
-            experiences that helped shape my skills as a frontend and full-stack
-            developer.
-          </p>
-        </div>
-
-        {experiences.map((experience) => (
-          <ExperienceCard key={experience.company} experience={experience} />
-        ))}
-
-        {!showProjects && (
-          <div className="journal-divider">
-            <span className="journal-divider__line"></span>
-
-            <button
-              className="journal-divider__button"
-              onClick={handleProjects}
-            >
-              <span className="flower">✿</span>
-
-              <span className="text">View My Projects</span>
-
-              <span className="arrow">↓</span>
-            </button>
-
-            <span className="journal-divider__line"></span>
+            <p className="my-experience-journey">
+              My journey through internships and real-world development
+              experiences that helped shape my skills as a frontend and
+              full-stack developer.
+            </p>
           </div>
-        )}
-      </section>
 
-      {/* ================= Projects ================= */}
-
-      <section
-        id="projects"
-        className={`projects-wrapper ${showProjects ? "show" : ""}`}
-      >
-        <section className="work-page__intro">
-          <p className="work-page__eyebrow">From my developer's journal</p>
-
-          <h1>Selected Work</h1>
-
-          <p>
-            A few projects where I turned ideas into friendly, responsive web
-            experiences.
-          </p>
-        </section>
-
-        <section className="work-page__grid" aria-label="Project portfolio">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          {experiences.map((experience) => (
+            <ExperienceCard key={experience.company} experience={experience} />
           ))}
+
+          {!showProjects && (
+            <div className="journal-divider">
+              <span className="journal-divider__line"></span>
+
+              <button
+                className="journal-divider__button"
+                onClick={handleProjects}
+              >
+                <span className="flower">✿</span>
+
+                <span className="text">View My Projects</span>
+
+                <span className="arrow">↓</span>
+              </button>
+
+              <span className="journal-divider__line"></span>
+            </div>
+          )}
         </section>
-      </section>
-    </main>
+
+        {/* ================= Projects ================= */}
+
+        <section
+          id="projects"
+          className={`projects-wrapper ${showProjects ? "show" : ""}`}
+        >
+          <section className="work-page__intro">
+            <p className="work-page__eyebrow">From my developer's journal</p>
+
+            <h1>Selected Work</h1>
+
+            <p>
+              A few projects where I turned ideas into friendly, responsive web
+              experiences.
+            </p>
+          </section>
+
+          <section className="work-page__grid" aria-label="Project portfolio">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </section>
+        </section>
+      </main>
+    </>
   );
 }

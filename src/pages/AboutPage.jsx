@@ -4,6 +4,7 @@ import "./AboutPage.css";
 import hcstLogo from "../../images/hcstlogo.jpg";
 import jmpsLogo from "../../images/jmpslogo.png";
 import sherwoodLogo from "../../images/swclogo.jpg";
+import ScrollProgress from "../components/ScrollProgress";
 
 const facts = [
   [
@@ -45,61 +46,64 @@ const education = [
 
 export default function AboutPage() {
   return (
-    <section className="about-section">
-      {/* Top Part */}
+    <>
+      <ScrollProgress />
+      <section className="about-section">
+        {/* Top Part */}
 
-      <div className="about-wrapper">
-        <div className="about-left">
-          <div className="polaroid">
-            <img src={profileImage} alt="Bhumika Awasthi" />
-            {/* <span className="polaroid-name">Bhumika!</span> */}
+        <div className="about-wrapper">
+          <div className="about-left">
+            <div className="polaroid">
+              <img src={profileImage} alt="Bhumika Awasthi" />
+              {/* <span className="polaroid-name">Bhumika!</span> */}
+            </div>
+
+            <div className="about-role">
+              <h3>Bhumika Awasthi</h3>
+              <p>Full Stack Developer</p>
+            </div>
           </div>
 
-          <div className="about-role">
-            <h3>Bhumika Awasthi</h3>
-            <p>Full Stack Developer</p>
+          <div className="about-right">
+            <h1>A little about me...</h1>
+
+            <ul className="about-list">
+              {facts.map(([icon, text]) => (
+                <li key={icon}>
+                  <span>{icon}</span>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="about-right">
-          <h1>A little about me...</h1>
+        {/* Bottom Part */}
 
-          <ul className="about-list">
-            {facts.map(([icon, text]) => (
-              <li key={icon}>
-                <span>{icon}</span>
-                <p>{text}</p>
-              </li>
+        <section className="education-section">
+          <h2>📖 My Educational Journey</h2>
+
+          <div className="education-board">
+            {education.map((item) => (
+              <article className="education-card" key={item.year}>
+                <img
+                  src={item.logo}
+                  alt={item.title}
+                  className="education-logo"
+                />
+
+                <span className="education-year">{item.year}</span>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.subtitle}</p>
+
+                <small>{item.place}</small>
+              </article>
             ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Bottom Part */}
-
-      <section className="education-section">
-        <h2>📖 My Educational Journey</h2>
-
-        <div className="education-board">
-          {education.map((item) => (
-            <article className="education-card" key={item.year}>
-              <img
-                src={item.logo}
-                alt={item.title}
-                className="education-logo"
-              />
-
-              <span className="education-year">{item.year}</span>
-
-              <h3>{item.title}</h3>
-
-              <p>{item.subtitle}</p>
-
-              <small>{item.place}</small>
-            </article>
-          ))}
-        </div>
+          </div>
+        </section>
       </section>
-    </section>
+    </>
   );
 }

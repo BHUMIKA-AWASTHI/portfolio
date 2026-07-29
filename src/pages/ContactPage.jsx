@@ -1,6 +1,11 @@
 import ContactSection from "../components/ContactSection";
-// import "./ContactPage.css";
+import ScrollProgress from "../components/ScrollProgress";
 
 export default function ContactPage() {
-  return <ContactSection />;
+  return (
+    <>
+      <ScrollProgress />
+      <ContactSection />
+    </>
+  );
 }

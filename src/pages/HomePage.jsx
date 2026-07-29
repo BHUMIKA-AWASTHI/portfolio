@@ -1,11 +1,13 @@
 import heroSticker from "../../images/hero-sticker.png";
 import ContactSection from "../components/ContactSection";
 import "./HomePage.css";
+import ScrollProgress from "../components/ScrollProgress";
 
 export default function HomePage() {
   // This page contains the existing hero, story and contact sections unchanged.
   return (
     <>
+      <ScrollProgress />
       <section className="hero">
         <div className="hero-left">
           <h1>

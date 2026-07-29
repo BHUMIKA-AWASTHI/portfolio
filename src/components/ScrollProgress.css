@@ -1,0 +1,39 @@
+/* ===========================================
+   Custom Scrollbar
+=========================================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0; /* left bhi kar sakte ho */
+  width: 8px;
+  height: 100vh;
+  z-index: 99999;
+
+  background: linear-gradient(180deg, #ffc3d8, #e87292, #7a002b);
+
+  transform-origin: top;
+
+  animation: scroll-progress linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-progress {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
