@@ -12,19 +12,19 @@ const experiences = [
       "Optimized frontend performance through debugging, testing, and modern development practices",
     ],
   },
-  {
-    company: "Maxtra Technologies Pvt Ltd.",
-    role: "Web Developer",
-    duration: "Jan 2026 – Mar 2026",
-    summary:
-      "Worked on frontend development projects by building responsive web pages, improving UI structure, and enhancing overall user experience.",
-    highlights: [
-      "Developed and enhanced responsive web pages using HTML, CSS, and JavaScript",
-      "Contributed to website revamping projects by improving layouts, UI structure, and user experience",
-      "Developed and integrated reusable global components to maintain consistency across web pages",
-      "Collaborated on frontend implementation, debugging, and optimization following modern development practices",
-    ],
-  },
+  // {
+  //   company: "Maxtra Technologies Pvt Ltd.",
+  //   role: "Web Developer",
+  //   duration: "Jan 2026 – Mar 2026",
+  //   summary:
+  //     "Worked on frontend development projects by building responsive web pages, improving UI structure, and enhancing overall user experience.",
+  //   highlights: [
+  //     "Developed and enhanced responsive web pages using HTML, CSS, and JavaScript",
+  //     "Contributed to website revamping projects by improving layouts, UI structure, and user experience",
+  //     "Developed and integrated reusable global components to maintain consistency across web pages",
+  //     "Collaborated on frontend implementation, debugging, and optimization following modern development practices",
+  //   ],
+  // },
   {
     company: "Aimerz.ai × Snapdeal",
     role: "Full Stack Engineer",
