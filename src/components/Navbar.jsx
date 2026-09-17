@@ -1,36 +1,71 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../images/logo.png";
 import "./Navbar.css";
 
-const BASE = import.meta.env.BASE_URL;
-
 const links = [
-  { label: "Home", href: `${BASE}` },
-  { label: "About", href: `${BASE}about/` },
-  { label: "Work", href: `${BASE}work/` },
-  { label: "Blog", href: `${BASE}blog/` },
-  { label: "Contact", href: `${BASE}contact/` },
+  { label: "Home", href: "#home", id: "home" },
+  { label: "About", href: "#about", id: "about" },
+  { label: "Work", href: "#work", id: "work" },
+  { label: "Projects", href: "#projects", id: "projects" },
+  { label: "Contact", href: "#contact", id: "contact" },
 ];
 
-export default function Navbar({ currentPage }) {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionIds = ["home", "about", "work", "projects", "contact"];
+      const scrollPosition = window.scrollY + 140;
+
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollPosition >= top) {
+            setActiveSection(sectionIds[i]);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (e, href, id) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    const targetEl = document.getElementById(id);
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", href);
+      setActiveSection(id);
+    }
+  };
 
   return (
     <header>
       <nav className="navbar">
-        <a href={BASE} className="logo">
+        <a
+          href="#home"
+          className="logo"
+          onClick={(e) => handleNavClick(e, "#home", "home")}
+        >
           <img src={logo} alt="Bhumika Logo" />
         </a>
 
         {/* Desktop */}
         <ul className="nav-links">
-          {links.map(({ label, href }) => (
-            <li key={href}>
+          {links.map(({ label, href, id }) => (
+            <li key={id}>
               <a
-                className={
-                  currentPage === label.toLowerCase() ? "active" : undefined
-                }
+                className={activeSection === id ? "active" : undefined}
                 href={href}
+                onClick={(e) => handleNavClick(e, href, id)}
               >
                 {label}
               </a>
@@ -52,18 +87,16 @@ export default function Navbar({ currentPage }) {
 
         {/* Mobile Menu */}
         <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
-          {links
-            // .filter((link) => link.label !== "Blog") // remove if you want Blog too
-            .map(({ label, href }) => (
-              <a
-                key={href}
-                href={href}
-                className={currentPage === label.toLowerCase() ? "active" : ""}
-                onClick={() => setMenuOpen(false)}
-              >
-                {label}
-              </a>
-            ))}
+          {links.map(({ label, href, id }) => (
+            <a
+              key={id}
+              href={href}
+              className={activeSection === id ? "active" : ""}
+              onClick={(e) => handleNavClick(e, href, id)}
+            >
+              {label}
+            </a>
+          ))}
         </div>
       </nav>
     </header>

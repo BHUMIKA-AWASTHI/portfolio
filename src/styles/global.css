@@ -23,6 +23,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 16px);
 }
 
 body {

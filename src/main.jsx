@@ -6,9 +6,8 @@ import "./styles/global.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* Navbar is shared; the page component changes for each entry point. */}
     <main className="site-shell">
-      <Navbar currentPage="home" />
+      <Navbar />
       <HomePage />
     </main>
   </StrictMode>,

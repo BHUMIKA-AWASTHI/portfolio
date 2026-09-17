@@ -61,15 +61,11 @@
   }
 }
 .projects-wrapper {
-  max-height: 0;
-  overflow-y: hidden;
-  opacity: 0;
+  opacity: 1;
   transition: 0.8s;
 }
 
 .projects-wrapper.show {
-  max-height: 5000px;
-
   opacity: 1;
 }
 
