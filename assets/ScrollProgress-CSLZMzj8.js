@@ -1,1 +1,0 @@
-import{n as e}from"./global-D8Dhb5yr.js";var t=e();function n(){return(0,t.jsx)(`div`,{className:`scroll-progress`})}export{n as t};
