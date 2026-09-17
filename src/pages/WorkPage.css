@@ -21,6 +21,155 @@
 .work-heading .my-experience-journey {
   margin-top: 3rem;
 }
+
+/*==================================
+  Single Experience Carousel & Navigation
+===================================*/
+
+.single-experience-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 3.5rem auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-card-viewport {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.work-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff6f9;
+  border: 2px solid #e56f95;
+  color: #7a002b;
+  font-size: 2.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 6px 18px rgba(122, 0, 43, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  user-select: none;
+  padding-bottom: 4px;
+}
+
+.work-arrow-btn span {
+  display: block;
+  transform: translateY(-1px);
+}
+
+.work-arrow-btn:hover {
+  background: #e56f95;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 8px 24px rgba(122, 0, 43, 0.28);
+}
+
+.work-arrow-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.work-arrow-btn--prev {
+  left: -28px;
+}
+
+.work-arrow-btn--next {
+  right: -28px;
+}
+
+/* Pagination Dots & Counter */
+.work-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.8rem;
+}
+
+.work-dots-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.work-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f0c2d3;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  padding: 0;
+}
+
+.work-dot.active {
+  background: #e56f95;
+  transform: scale(1.35);
+  box-shadow: 0 2px 8px rgba(229, 111, 149, 0.45);
+}
+
+.work-dot:hover:not(.active) {
+  background: #df94b1;
+  transform: scale(1.15);
+}
+
+.work-counter {
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #b15072;
+}
+
+@media (max-width: 960px) {
+  .work-arrow-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+  }
+
+  .work-arrow-btn--prev {
+    left: -14px;
+  }
+
+  .work-arrow-btn--next {
+    right: -14px;
+  }
+}
+
+@media (max-width: 620px) {
+  .single-experience-container {
+    margin-top: 2rem;
+  }
+
+  .work-arrow-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+
+  .work-arrow-btn--prev {
+    left: -6px;
+  }
+
+  .work-arrow-btn--next {
+    right: -6px;
+  }
+}
 .work-page__intro h1,
 .work-heading h1 {
   margin: 0;

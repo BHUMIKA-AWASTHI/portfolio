@@ -3,9 +3,8 @@ import profileImage from "../../images/my-polaroid.png";
 import hcstLogo from "../../images/hcstlogo.jpg";
 import jmpsLogo from "../../images/jmpslogo.png";
 import sherwoodLogo from "../../images/swclogo.jpg";
-import experiences from "../data/experiences";
 import projects from "../data/projects";
-import ExperienceCard from "../components/ExperienceCard";
+import WorkSection from "../components/WorkSection";
 import ProjectCard from "../components/ProjectCard";
 import ContactSection from "../components/ContactSection";
 import ScrollProgress from "../components/ScrollProgress";
@@ -171,23 +170,7 @@ export default function HomePage() {
 
       {/* ================= 3. WORK SECTION ================= */}
       <section id="work" className="work-page">
-        <section className="work-experience">
-          <div className="work-heading">
-            <p className="work-page__eyebrow">Professional Journey</p>
-
-            <h1>Work Experience</h1>
-
-            <p className="my-experience-journey">
-              My journey through internships and real-world development
-              experiences that helped shape my skills as a frontend and
-              full-stack developer.
-            </p>
-          </div>
-
-          {experiences.map((experience) => (
-            <ExperienceCard key={experience.company} experience={experience} />
-          ))}
-        </section>
+        <WorkSection />
       </section>
 
       {/* ================= 4. PROJECTS SECTION ================= */}
