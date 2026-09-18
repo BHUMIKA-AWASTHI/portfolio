@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bhumika-awasthi.github.io/portfolio/sitemap.xml
