@@ -60,13 +60,14 @@ export default function HomePage() {
       <section id="home" className="home-section-container">
         <section className="hero">
           <div className="hero-left">
+            <span className="hero-intro-tag">Hi, I'm Bhumika Awasthi</span>
             <h1>
               <span className="developer-herotext">Developer's</span>
               <span className="journal-herotext">Journal </span>
             </h1>
             <span className="volume"> Volume 01 </span>
             <p>
-              Building clean, scalable and user-focused web experiences one line
+              I'm Bhumika Awasthi, a Full Stack Developer building clean, scalable and user-focused web experiences one line
               of code at a time.
             </p>
             <div className="hero-points">
