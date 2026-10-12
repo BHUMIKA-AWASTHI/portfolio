@@ -1,5 +1,19 @@
 const projects = [
   {
+    title: "CRAFT & CRUMB",
+    year: "2026",
+    summary:
+      "An immersive culinary showcase featuring an interactive burger deconstruction experience, scroll-driven animations, and a premium artisan menu catalog.",
+    highlights: [
+      "Interactive burger layer deconstruction with scroll and keyboard controls",
+      "Vanilla JavaScript and CSS3 with zero external frameworks",
+      "Dynamic menu filtering with category-based navigation",
+      "Interactive dish detail modals with nutritional and allergen information",
+      "Responsive dark-luxury UI with smooth animations and micro-interactions",
+    ],
+    liveUrl: "https://craft-and-crumb.vercel.app/",
+  },
+  {
     title: "Mine Eraaah",
     year: "2025",
     summary:

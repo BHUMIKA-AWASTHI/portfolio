@@ -11,7 +11,6 @@ export default function ProjectCard({ project }) {
     <article className="project-card">
       <div className="project-card__tape" aria-hidden="true" />
       <div className="project-card__meta">
-        <span>Project note</span>
         <span>{year}</span>
       </div>
 
