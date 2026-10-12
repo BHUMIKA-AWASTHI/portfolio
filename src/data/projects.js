@@ -34,7 +34,7 @@ const projects = [
       "MERN stack application",
       "Authentication and cart system",
       "Responsive, API-powered interface",
-      "Deplying soon!",
+      "Deploying soon!",
     ],
   },
   {
