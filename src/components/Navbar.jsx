@@ -55,7 +55,7 @@ export default function Navbar() {
           className="logo"
           onClick={(e) => handleNavClick(e, "#home", "home")}
         >
-          <img src={logo} alt="Bhumika Logo" />
+          <img src={logo} alt="Bhumika Awasthi - Full Stack Developer Logo" />
         </a>
 
         {/* Desktop */}

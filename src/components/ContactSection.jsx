@@ -58,7 +58,7 @@ export default function ContactSection() {
         </div>
         <div className="contact-right">
           <div className="paper-wrapper">
-            <img className="paper-bg" src={paper} alt="Notebook Paper" />
+            <img className="paper-bg" src={paper} alt="Bhumika Awasthi Contact Note Paper" />
             <form
               action="https://formspree.io/f/xbdnpadd"
               method="POST"

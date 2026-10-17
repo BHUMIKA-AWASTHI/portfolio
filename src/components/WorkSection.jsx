@@ -18,7 +18,7 @@ export default function WorkSection() {
       <div className="work-heading">
         <p className="work-page__eyebrow">Professional Journey</p>
 
-        <h1>Work Experience</h1>
+        <h2>Work Experience</h2>
 
         <p className="my-experience-journey">
           My journey through internships and real-world development

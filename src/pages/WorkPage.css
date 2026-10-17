@@ -171,7 +171,9 @@
   }
 }
 .work-page__intro h1,
-.work-heading h1 {
+.work-page__intro h2,
+.work-heading h1,
+.work-heading h2 {
   margin: 0;
   color: var(--primary);
   font-family: Amsterdam, Georgia, serif;

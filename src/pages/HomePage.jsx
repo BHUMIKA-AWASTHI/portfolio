@@ -60,11 +60,14 @@ export default function HomePage() {
       <section id="home" className="home-section-container">
         <section className="hero">
           <div className="hero-left">
-            <span className="hero-intro-tag">Hi, I'm Bhumika Awasthi</span>
-            <h1>
+            
+            <p className="visually-hidden">
+              Official portfolio of Bhumika Awasthi — Full Stack Developer specializing in React.js, MERN stack, frontend architecture, and scalable web applications.
+            </p>
+            <h2 className="hero-journal-heading">
               <span className="developer-herotext">Developer's</span>
               <span className="journal-herotext">Journal </span>
-            </h1>
+            </h2>
             <span className="volume"> Volume 01 </span>
             <p>
               I'm Bhumika Awasthi, a Full Stack Developer building clean, scalable and user-focused web experiences one line
@@ -95,12 +98,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-right">
-            <img src={heroSticker} alt="Developer Sticker" />
+            <img src={heroSticker} alt="Bhumika Awasthi Developer's Journal Graphic" />
           </div>
         </section>
 
         <section className="story">
-          <h1>A New Chapter Begins!</h1>
+          <h2>A New Chapter Begins!</h2>
           <p>
             Behind every interface lies a story of countless ideas, careful
             decisions, and continuous learning.
@@ -120,7 +123,7 @@ export default function HomePage() {
         <div className="about-wrapper">
           <div className="about-left">
             <div className="polaroid">
-              <img src={profileImage} alt="Bhumika Awasthi" />
+              <img src={profileImage} alt="Bhumika Awasthi - Full Stack Developer Profile Polaroid" />
             </div>
 
             <div className="about-role">
@@ -130,7 +133,7 @@ export default function HomePage() {
           </div>
 
           <div className="about-right">
-            <h1>A little about me...</h1>
+            <h2>A little about me...</h2>
 
             <ul className="about-list">
               {facts.map(([icon, text]) => (
@@ -152,7 +155,7 @@ export default function HomePage() {
               <article className="education-card" key={item.year}>
                 <img
                   src={item.logo}
-                  alt={item.title}
+                  alt={`${item.title} - ${item.place}`}
                   className="education-logo"
                 />
 
@@ -180,7 +183,7 @@ export default function HomePage() {
           <section className="work-page__intro">
             <p className="work-page__eyebrow">From my developer's journal</p>
 
-            <h1>Selected Work</h1>
+            <h2>Selected Work</h2>
 
             <p>
               A few projects where I turned ideas into friendly, responsive web

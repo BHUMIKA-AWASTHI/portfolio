@@ -1,15 +1,25 @@
 {
-  "name": "Bhumika Awasthi | Portfolio",
+  "name": "Bhumika Awasthi | Full Stack Developer",
   "short_name": "Bhumika Awasthi",
   "icons": [
     {
+      "src": "/portfolio/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/portfolio/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
       "src": "/portfolio/favicon.png",
-      "sizes": "512x512",
+      "sizes": "64x64",
       "type": "image/png"
     }
   ],
   "start_url": "/portfolio/",
   "display": "standalone",
-  "theme_color": "#111111",
+  "theme_color": "#7a002b",
   "background_color": "#ffffff"
 }

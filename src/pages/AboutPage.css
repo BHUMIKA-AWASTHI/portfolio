@@ -59,7 +59,8 @@
   color: #a05d79;
 }
 
-.about-right h1 {
+.about-right h1,
+.about-right h2 {
   margin: 0 0 28px;
   color: #ef5d93;
   font-family: Georgia, serif;
