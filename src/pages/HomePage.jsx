@@ -60,11 +60,10 @@ export default function HomePage() {
       <section id="home" className="home-section-container">
         <section className="hero">
           <div className="hero-left">
-            
-            <p className="visually-hidden">
-              Official portfolio of Bhumika Awasthi — Full Stack Developer specializing in React.js, MERN stack, frontend architecture, and scalable web applications.
-            </p>
-            <h2 className="hero-journal-heading">
+            <h1 className="visually-hidden">
+              Bhumika Awasthi — Full Stack Developer | Official Portfolio
+            </h1>
+            <h2 className="hero-journal-heading" aria-label="Bhumika Awasthi's Developer Journal">
               <span className="developer-herotext">Developer's</span>
               <span className="journal-herotext">Journal </span>
             </h2>
